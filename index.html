@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="check_cont">
+        <div class="btn_new_gmae">new game</div>
+        <div>
+            <p class="player_X_cont">player - X : <span class="player_X">0</span></p>
+            <p class="player_0_cont">player - O : <span class="player_0">0</span></p>
+        </div>
+    </div>
+    <div class="big-cont"></div>
+    <div class="parent">
+        <img class="carcas_img" src="./img/scuer.png">
+        <div class="game">
+            <div class="game__wrap">
+                <div class="game__row border-bottom">
+                    <button class="buttons border-right"></button>
+                    <button class="buttons border-right"></button>
+                    <button class="buttons"></button>
+                </div>
+
+                <div class="game__row border-bottom">
+                    <button class="buttons border-right"></button>
+                    <button class="buttons border-right"></button>
+                    <button class="buttons"></button>
+
+                </div>
+
+                <div class="game__row">
+                    <button class="buttons border-right"></button>
+                    <button class="buttons border-right"></button>
+                    <button class="buttons"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="win_popup">
+        <h1 class="win_popup_text"></h1>
+        <button class="button_ok">ok</button>
+    </div>
+
+    <script src="Gradient.js"></script>
+
+    <script src="script.js"></script>
+
+    <script src="Gradient.js"></script>
+    <canvas id="gradient-canvas"></canvas>
+    <script>
+        var gradient = new Gradient()
+        gradient.initGradient('#gradient-canvas');
+    </script>
+</body>
+
+</html>
