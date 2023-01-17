@@ -47,9 +47,8 @@
 //     })
 // })
 
-
-
 // // ___________________________________________________________cod 2______________________________________________________________________
+
 const
     game__bord = document.querySelectorAll('.buttons'),
     win_popup = document.querySelector('.win_popup'),
@@ -67,6 +66,7 @@ let
     check_0 = 0;
 
 game__bord.forEach((item, i) => {
+    const inText = item.querySelector('.buttons_texts')
     //_____________continue______________
     button_ok.addEventListener('click', () => {
         win_popup.setAttribute('style', 'display: none;')
@@ -78,43 +78,46 @@ game__bord.forEach((item, i) => {
         localStorage.clear()
         player_0.textContent = 0;
         player_X.textContent = 0;
-        check_x = 0,
-            check_0 = 0;
-        document.querySelector('.player_X').textContent = 0;
+        check_x = 0;
+        check_0 = 0;
     })
     // ______________reset______________
     function reset() {
-        item.textContent = '';
+        inText.textContent = '';
         gamerX = '';
         gamer0 = '';
         res = 'X';
     }
-
     item.addEventListener('click', () => {
-        if (item.textContent === '') {
+
+        if (inText.textContent === '') {
             //_____________gamer 1_____________
             if (res === 'X') {
-                item.textContent = 'X'
+                inText.textContent = 'X'
                 gamerX += i
                 logic(gamerX, 'Player X win')
 
-                item.classList.add('animFrom_X')
+                inText.classList.add('animFrom_X')
+                inText.classList.add('animate__bounceIn')
                 setTimeout(() => {
-                    item.classList.remove('animFrom_X')
-                }, 300);
+                    inText.classList.remove('animFrom_X')
+                    inText.classList.remove('animate__bounceIn')
+                }, 800);
 
                 res = 'O';
             }
             //_____________gamer 2_____________
             else if (res === 'O') {
-                item.textContent = 'O'
+                inText.textContent = 'O'
                 gamer0 += i
                 logic(gamer0, 'Player O win')
 
-                item.classList.add('animFrom_O')
+                inText.classList.add('animFrom_O')
+                inText.classList.add('animate__bounceIn')
                 setTimeout(() => {
-                    item.classList.remove('animFrom_O')
-                }, 300);
+                    inText.classList.remove('animFrom_O')
+                    inText.classList.remove('animate__bounceIn')
+                }, 800);
 
                 res = 'X';
             }
