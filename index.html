@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./card-ui-hover/card-ui-hover.css">
     <link rel="stylesheet" href="./animate.css">
     <link rel="stylesheet" href="style.css">
     <title>tic-tac-toe</title>
@@ -22,8 +21,9 @@
     <div class="big-cont"></div>
     <div class="parent vanilla-tilt-3D">
         <img class="carcas_img" src="./img/scuer.png">
-        <div class="game">
+        <div class="game container">
             <div class="game__wrap">
+
                 <div class="game__row border-bottom">
                     <button class="buttons border-right">
                         <div class="buttons_texts"></div>
@@ -46,7 +46,6 @@
                     <button class="buttons">
                         <div class="buttons_texts"></div>
                     </button>
-
                 </div>
 
                 <div class="game__row">
@@ -60,6 +59,7 @@
                         <div class="buttons_texts"></div>
                     </button>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -84,9 +84,9 @@
 
     <script>
         VanillaTilt.init(document.querySelectorAll(".vanilla-tilt-3D"), {
-            max: 15,
+            max: 25,
             speed: 400,
-            scale: 1.1
+            scale: 0.95
         });
     </script>
 </body>
