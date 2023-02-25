@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./card-ui-hover/card-ui-hover.css">
     <link rel="stylesheet" href="./animate.css">
     <link rel="stylesheet" href="style.css">
     <title>tic-tac-toe</title>
@@ -19,7 +20,7 @@
         </div>
     </div>
     <div class="big-cont"></div>
-    <div class="parent">
+    <div class="parent vanilla-tilt-3D">
         <img class="carcas_img" src="./img/scuer.png">
         <div class="game">
             <div class="game__wrap">
@@ -77,6 +78,16 @@
     <script>
         var gradient = new Gradient()
         gradient.initGradient('#gradient-canvas');
+    </script>
+    <script src="./card-ui-hover/vanilla-tilt.min.js"></script>
+    <!-- card-ui-hover/vanilla-tilt - setings -->
+
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".vanilla-tilt-3D"), {
+            max: 15,
+            speed: 400,
+            scale: 1.1
+        });
     </script>
 </body>
 

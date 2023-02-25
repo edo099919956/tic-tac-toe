@@ -1,0 +1,65 @@
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    height: 375px;
+    margin: 20px;
+    background: #ac00ff;
+    background: linear-gradient(63deg, #0000ff 0%, #c000ff 63%, #c000ff 100%);
+    border-radius: 40px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    text-transform: capitalize;
+
+    &::before {
+        content: 'Leo';
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        font-size: 5em;
+        font-weight: 900;
+        color: #fff;
+        font-style: italic;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    &::after {
+        content: 'Shopping';
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #fff;
+        font-style: italic;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    img {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        text-align: center;
+        transform-style: preserve-3d;
+        transform: translate3d(-50%, 0, 75px);
+        color: #fff;
+        width: 75%;
+        height: fit-content;
+        transition: 0.5s;
+    }
+
+    img {
+        transform: translate3d(-50%, 0, 150px);
+    }
+}
